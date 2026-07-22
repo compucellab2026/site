@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Masculinos - Vitrine de Perfumes Árabes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+    
+
+
+</head>
+<body>
+    <script src="vendidos/vendido.js"></script>
+    <script src="ordernar-precos.js"></script>
+
+
+    <!-- Botão Voltar Responsivo -->
+<button id="btn-voltar" aria-label="Voltar" title="Voltar">
+  <span class="icon" aria-hidden="true">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="label">Voltar</span>
+</button>
+
+<!-- Inicio Botão Voltar Responsivo -->
+
+<script>
+(function(){
+  const btn = document.getElementById('btn-voltar');
+  const fallbackUrl = document.referrer || '/';
+
+  // Mostra/esconde botão quando rolar a página
+  const toggleButton = () => {
+    if(window.scrollY > 200){
+      btn.style.left = '20px'; // desliza para dentro da tela
+    } else {
+      btn.style.left = '-120px'; // esconde fora da tela
+    }
+  }
+
+  window.addEventListener('scroll', toggleButton);
+  toggleButton(); // inicializa
+
+  // Clique do botão
+  btn.addEventListener('click', () => {
+    if (window.history.length > 1) {
+      window.history.back();
+      setTimeout(() => {
+        if (document.visibilityState === 'visible') {
+          window.location.href = fallbackUrl;
+        }
+      }, 400);
+    } else {
+      window.location.href = fallbackUrl;
+    }
+  });
+})();
+</script>
+    <!-- Fim Botão Voltar Responsivo -->
+
+
+
+
+    <div class="page-container">
+         
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-container">
+                        <img src="logo/original.png" alt="Logo" class="logo">
+                    </div>
+                    <div class="header-text">
+                        <h1>Perfumes Masculinos</h1>
+                        <p>Fragrâncias marcantes e elegantes</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+         
+        <nav class="navigation">
+            <div class="container">
+                <div class="nav-links">
+                    
+                    
+                </div>
+            </div>
+        </nav>
+
+          
+        <section class="products">
+            <div class="container">
+                <div class="sort-controls">
+  <button onclick="ordenarPrecos('asc')">Preço: Menor → Maior</button>
+  <button onclick="ordenarPrecos('desc')">Preço: Maior → Menor</button>
+</div>
+
+                <div class="products-grid">
+                    <div id="perfume1" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Adobe Express - file.png" alt="212 vip black" class="Perfume 212 vip black">
+                        <img src="public/Nova-pasta/notas/Adobe Express - file (1).png" alt="Oud Imperial" class="product-image">
+                        <div class="product-info">
+                            <h2>212 vip black</h2>
+                            <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 589,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume2" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/212 nyc.png" class="212 nyc" alt="Perfume 212 nyc">
+                        <img src="public/Nova-pasta/notas/notanyc.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>212 NYC</h2>
+                       <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 529,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume3" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/212 Sexy Men Carolina Herrera.png" class="212 Sexy Men Carolina Herrera" alt="Perfume 212 Sexy Men Carolina Herrera">
+                        <img src="public/Nova-pasta/notas/212 Sexy Men Carolina Herrera.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>212 Sexy Men Carolina Herrera</h2>
+                       <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 549,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume4" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/ferrari.png" alt="ferrari.jpg" class="Perfume Ferrari Black">
+                        <img src="public/Nova-pasta/notas/notaferrari1.png" alt="Sultão Negro" class="product-image">
+                        <div class="product-info">
+                            <h2>Ferrari Black</h2>
+                          <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 199,00</div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div id="perfume5" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Montblanc.png" class="Perfume Montblanc Emblem">
+                      <img src="public/Nova-pasta/notas/notamontblanc1.png" alt="Príncipe do Oriente" class="product-image">
+                        <div class="product-info">
+                            <h2>Montblanc Emblem</h2>
+                          <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 350,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume6" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Legend Eau de Parfum Montblanc.png" class="Legende Eua" alt="Perfume Legend Eau de Parfum Montblanc">
+                        <img src="public/Nova-pasta/notas/notaLegend Eau de Parfum Montblanc.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Montblanc Legend Eau de Parfum</h2>
+                       <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 429,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume7" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/legend.png" class="Legende Eua" alt="Perfume Legend Eau de Parfum Montblanc">
+                        <img src="public/Nova-pasta/notas/notalegend.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Montblanc Legend Spirit</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 399,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume8" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Starwalker Montblanc.png" class="Starwalker Montblanc" alt=" Starwalker Montblanc">
+                        <img src="public/Nova-pasta/notas/Starwalker Montblanc.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Starwalker Montblanc</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 300,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume9" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Individuel Montblanc.png" class="Individuel Montblanc" alt=" Individuel Montblanc">
+                        <img src="public/Nova-pasta/notas/Individuel Montblanc.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Individuel Montblanc</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 269,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume10" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Presence Montblanc.png" class="Presence Montblanc" alt="Presence Montblanc">
+                        <img src="public/Nova-pasta/notas/Presence Montblanc.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Presence Montblanc</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 219,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume11" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/armani.png" alt="armani.png class="Perfume Armani Code Parfum">
+                        <img src="public/Nova-pasta/notas/notaarmani1.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Giorgio Armani Code Parfum</h2>
+                           <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 350,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume12" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Acqua di Gio Giorgio Armani.png" alt="Acqua di Gio Giorgio Armani class="Perfume Acqua di Gio Giorgio Armani>
+                        <img src="public/Nova-pasta/notas/Acqua di Gio Giorgio Armani.png" alt="Acqua di Gio Giorgio Armani" class="product-image">
+                        <div class="product-info">
+                            <h2>Acqua di Gio Giorgio Armani</h2>
+                           <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 499,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume13" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/1milion.png" class="milion-img" alt="Perfume 1 Million">
+                        <img src="public/Nova-pasta/notas/nota1milion.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>1 Milion</h2>
+                       <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 350,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume14"class="product-card">
+                        <img src="public/Nova-pasta/perfumes/gucci.png" class="milion-img" alt="Perfume 1 Million">
+                        <img src="public/Nova-pasta/notas/guccinota.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Gucci Guilty Pour Homme Parfum</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 1.399,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume15" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/chanel.png" class="chanel" alt="Perfume chenel">
+                        <img src="public/Nova-pasta/notas/notachanel.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Allure Homme Sport Eau Extreme</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 1.099,00</div>
+                        </div>
+                    </div>
+
+                     <div id="perfume16" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/badboy.jpg" class="badboy" alt="Perfume badboy">
+                        <img src="public/Nova-pasta/notas/notabadboy.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Badboy Carolina Herrera</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 649,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume17" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/black.png" class="black" alt="Perfume black">
+                        <img src="public/Nova-pasta/notas/notablack.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Black XS</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 449,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume18" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/polo.png" class="polo" alt="Perfume polo">
+                        <img src="public/Nova-pasta/notas/notapolo.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Polo Sport Ralph Lauren</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 419,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume19" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Ralph's Club Parfum Ralph Lauren.png" class="Ralph's Club Parfum Ralph Lauren" alt="Perfume Ralph's Club Parfum Ralph Lauren">
+                        <img src="public/Nova-pasta/notas/Ralph's Club Parfum Ralph Lauren.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Ralph's Club Parfum Ralph Lauren</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 769,00</div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div id="perfume20" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Invictus Rabanne.png" class="Invictus Rabanne" alt="Invictus Rabanne">
+                        <img src="public/Nova-pasta/notas/Invictus Rabanne.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Invictus Rabanne Eau Parfum</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 449,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume21" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/L'Eau d'Issey Pour Homme Issey Miyake.png" class="L'Eau d'Issey Pour Homme Issey Miyake" alt="L'Eau d'Issey Pour Homme Issey Miyake">
+                        <img src="public/Nova-pasta/notas/L'Eau d'Issey Pour Homme Issey Miyake.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>L'Eau d'Issey Pour Homme Issey Miyake</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 399,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume22" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Le Male Jean Paul Gaultier.png" class="Le Male Jean Paul Gaultier" alt=" Le Male Jean Paul Gaultier">
+                        <img src="public/Nova-pasta/notas/Le Male Jean Paul Gaultier.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Le Male Jean Paul Gaultier</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 549,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume23" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Nautica Voyage Sport Nautica.png" class="Nautica Voyage Sport Nautica" alt=" Nautica Voyage Sport Nautica">
+                        <img src="public/Nova-pasta/notas/Nautica Voyage Sport Nautica.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Nautica Voyage Sport Nautica</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 549,00</div>
+                        </div>
+                    </div>
+
+                     <div id="perfume24" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Animale Animale for Men Animale.png" class="Animale for Men Animale" alt=" Animale for Men Animale">
+                        <img src="public/Nova-pasta/notas/Animale Animale for Men Animale.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Animale for Men Animale</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 199,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume25" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Pi Givenchy.png" class="Pi Givenchy" alt=" Pi Givenchy">
+                        <img src="public/Nova-pasta/notas/Pi Givenchy.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Pi Givenchy</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 689,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfumea26" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Bleu de Chanel.png" class="Bleu de Chanel" alt="Bleu de Chanel">
+                        <img src="public/Nova-pasta/notas/Bleu de Chanel.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Bleu de Chanel</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 999,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfumea27" class="product-card">
+                        <img src="public/Nova-pasta/perfumes/Boss in Motion Hugo Boss.png" class="Boss in Motion Hugo Boss" alt="Boss in Motion Hugo Boss">
+                        <img src="public/Nova-pasta/notas/Boss in Motion Hugo Boss.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Boss in Motion Hugo Boss</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 299,00</div>
+                        </div>
+                    </div>
+
+                   
+
+                    
+                    
+                </section>
+                    
+                    
+
+         
+       <footer class="footer">
+            <div class="container">
+                <p>© 2025 - Vitrine de Perfumes Árabes | Desenvolvido com elegância</p>
+            </div>
+        </footer>
+    </div>
+
+
+
+</body>
+</html>

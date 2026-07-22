@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfumes Femininos - Vitrine de Perfumes Árabes</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+    <link rel="manifest" href="img/site.webmanifest">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    <script src="vendidos/feminos.js"></script>
+    <script src="ordernar-precos.js"></script>
+
+
+        <!-- Botão Voltar Responsivo -->
+<button id="btn-voltar" aria-label="Voltar" title="Voltar">
+  <span class="icon" aria-hidden="true">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </span>
+  <span class="label">Voltar</span>
+</button>
+
+<!-- Inicio Botão Voltar Responsivo -->
+
+<script>
+(function(){
+  const btn = document.getElementById('btn-voltar');
+  const fallbackUrl = document.referrer || '/';
+
+  // Mostra/esconde botão quando rolar a página
+  const toggleButton = () => {
+    if(window.scrollY > 200){
+      btn.style.left = '20px'; // desliza para dentro da tela
+    } else {
+      btn.style.left = '-120px'; // esconde fora da tela
+    }
+  }
+
+  window.addEventListener('scroll', toggleButton);
+  toggleButton(); // inicializa
+
+  // Clique do botão
+  btn.addEventListener('click', () => {
+    if (window.history.length > 1) {
+      window.history.back();
+      setTimeout(() => {
+        if (document.visibilityState === 'visible') {
+          window.location.href = fallbackUrl;
+        }
+      }, 400);
+    } else {
+      window.location.href = fallbackUrl;
+    }
+  });
+})();
+</script>
+    <!-- Fim Botão Voltar Responsivo -->
+
+    <div class="page-container">
+         
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo-container">
+                        <img src="logo/original.png" alt="Logo" class="logo">
+                    </div>
+                    <div class="header-text">
+                        <h1>Perfumes Masculinos</h1>
+                        <p>Fragrâncias marcantes e elegantes</p>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+         
+        <nav class="navigation">
+            <div class="container">
+                <div class="nav-links">
+                    
+                </div>
+            </div>
+        </nav>
+
+          
+        <section class="products">
+            <div class="container">
+                <div class="sort-controls">
+  <button onclick="ordenarPrecos('asc')">Preço: Menor → Maior</button>
+  <button onclick="ordenarPrecos('desc')">Preço: Maior → Menor</button>
+</div>
+                <div class="products-grid">
+                    <div id="perfume1" class="product-card">
+                        <img src="public/perfumes-fem/Idôle Lancôme.png" alt="Idole" class="Perfume Idole">
+                        <img src="public/notas-fem/Idôle Lancôme.png" alt="Oud Imperial" class="product-image">
+                        <div class="product-info">
+                            <h2>Idôle Lancôme</h2>
+                           <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 759,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume2" class="product-card">
+                        <img src="public/perfumes-fem/Miss Dior.png" class="Miss Dior" alt="Perfume Miss Dior">
+                        <img src="public/notas-fem/Miss Dior.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Miss Dior Eau de Parfum</h2>
+                       <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 899,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume3" class="product-card">
+                        <img src="public/perfumes-fem/Pure XS.png" alt="Pure XS" class="Perfume Pure XS">
+                        <img src="public/notas-fem/Pure XS.png" alt="Sultão Negro" class="product-image">
+                        <div class="product-info">
+                            <h2>Pure XS For Her</h2>
+                           <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 799,00</div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div id="perfume4" class="product-card">
+                        <img src="public/perfumes-fem/Scandal.png" alt="Scandal" class="Perfume ">
+                      <img src="public/notas-fem/Scandal.png" alt="Príncipe do Oriente" class="product-image">
+                        <div class="product-info">
+                            <h2>Scandal Jean Paul Gaultier</h2>
+                          <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 699,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume5" class="product-card">
+                        <img src="public/perfumes-fem/Sì Passione Intense Giorgio Armani.png" class="Sì Passione Intense Giorgio Armani" alt="Perfume Sì Passione Intense Giorgio Armani">
+                        <img src="public/notas-fem/Sì Passione Intense Giorgio Armani.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Sì Passione Intense Giorgio Armani</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 799,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume6" class="product-card">
+                        <img src="public/perfumes-fem/Emporio Armani Because It’s You.png" class="Emporio Armani Because It’s You" alt="Perfume Emporio Armani Because It’s You">
+                        <img src="public/notas-fem/Emporio Armani Because It’s You.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Emporio Armani Because It’s You</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 659,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume7" class="product-card">
+                        <img src="public/perfumes-fem/My Euphoria Calvin Klein.png" alt="My Euphoria Calvin Klein.png" alt="Perfume My Euphoria Calvin Klein">
+                        <img src="public/notas-fem/My Euphoria Calvin Klein.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>My Euphoria Calvin Klein</h2>
+                          <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 389,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume8" class="product-card">
+                        <img src="public/perfumes-fem/Présence d'une femme Montblanc.png" class="Présence d'une femme Montblanc.png" alt="Perfume Présence d'une femme Montblanc">
+                        <img src="public/notas-fem/My Euphoria Calvin Klein.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Présence d'une femme Montblanc</h2>
+                       <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 249,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume9" class="product-card">
+                        <img src="public/perfumes-fem/Clinique Happy Limited Edition 2022.png" class="Clinique Happy Limited Edition 2022 " alt="Perfume Clinique Happy Limited Edition 2022">
+                        <img src="public/notas-fem/Présence d'une femme Montblanc.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Clinique Happy Limited Edition 2022 </h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 399,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume10" class="product-card">
+                        <img src="public/perfumes-fem/United Dreams Love Yourself Benetton.png" class="United Dreams Love Yourself Benetton" alt="Perfume United Dreams Love Yourself Benetton">
+                        <img src="public/notas-fem/United Dreams Love Yourself Benetton.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>United Dreams Love Yourself Benetton</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 150,00</div>
+                        </div>
+                    </div>
+
+                     <div id="perfume11" class="product-card">
+                        <img src="public/perfumes-fem/Fantasy Britney Spears.png" class="Fantasy Britney Spears" alt="Perfume Fantasy Britney Spears">
+                        <img src="public/notas-fem/Fantasy Britney Spears.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Fantasy Britney Spears</h2>
+                       <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 189,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume12" class="product-card">
+                        <img src="public/perfumes-fem/Light Blue Dolce&Gabbana.png" class="Light Blue Dolce&Gabbana" alt="Perfume Light Blue Dolce&Gabbana">
+                        <img src="public/notas-fem/Light Blue Dolce&Gabbana.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Light Blue Dolce&Gabbana</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 449,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume13" class="product-card">
+                        <img src="public/perfumes-fem/Valentino Donna Born In Roma Intense.png" class="Valentino Donna Born In Roma Intense" alt="Perfume Valentino Donna Born In Roma Intense">
+                        <img src="public/notas-fem/Valentino Donna Born In Roma Intense.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Valentino Donna Born In Roma Intense</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 799,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume14" class="product-card">
+                        <img src="public/perfumes-fem/Miracle Lancôme.png" class="Miracle Lancôme" alt="Miracle Lancôme">
+                        <img src="public/notas-fem/Miracle Lancôme.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Miracle Lancôme</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 649,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume15" class="product-card">
+                        <img src="public/perfumes-fem/La Vie Est Belle L'Eau de Parfum.png" class="La Vie Est Belle L'Eau de Parfum" alt="La Vie Est Belle L'Eau de Parfum">
+                        <img src="public/notas-fem/La Vie Est Belle L'Eau de Parfum.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>La Vie Est Belle L'Eau de Parfum Lancôme</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 769,00</div>
+                        </div>
+                    </div>
+
+                        <div id="perfume16" class="product-card">
+                        <img src="public/perfumes-fem/Good Girl Blush Elixir Eau de Parfum Carolina Herrera.png" class="Good Girl Blush Elixir Eau de Parfum Carolina Herrera" alt="Good Girl Blush Elixir Eau de Parfum Carolina Herrera">
+                        <img src="public/notas-fem/Good Girl Blush Elixir Eau de Parfum Carolina Herrera.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>Good Girl Blush Elixir Eau de Parfum Carolina Herrera</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 889,00</div>
+                        </div>
+                    </div>
+
+                    
+
+                    <div id="perfume17" class="product-card">
+                        <img src="public/perfumes-fem/CH Carolina Herrera.png" class="CH Carolina Herrera" alt="CH Carolina Herrera">
+                        <img src="public/notas-fem/CH Carolina Herrera.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>CH Carolina Herrera</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 649,00</div>
+                        </div>
+                    </div>
+
+                    <div id="perfume18" class="product-card">
+                        <img src="public/perfumes-fem/My Way Giorgio Armani.png" class="My Way Giorgio Armani" alt="My Way Giorgio Armani">
+                        <img src="public/notas-fem/My Way Giorgio Armani.png" alt="Rei do Deserto" class="product-image">
+                        <div class="product-info">
+                            <h2>My Way Giorgio Armani</h2>
+                        <h4>Parcelamos em 12x </h4>
+                            <div class="product-price">R$ 649,00</div>
+                        </div>
+                    </div>
+
+
+
+
+                    
+                    
+                </section>
+                    
+                    
+
+         
+       <footer class="footer">
+            <div class="container">
+                <p>© 2025 - Vitrine de Perfumes Árabes | Desenvolvido com elegância</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
