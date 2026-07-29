@@ -1,0 +1,585 @@
+/* Reset e configurações básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #ffffff;
+}
+
+/* Container principal */
+.page-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header */
+
+.header {
+  background: linear-gradient(to bottom, #494949, #000000);
+  color: rgb(255, 255, 255);
+  padding: 2rem 0;
+}
+
+.header-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.logo-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.header-text p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Navigation */
+/*.navigation {
+  background: linear-gradient(135deg, #494949, #000000) ;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}*/
+
+.nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem 0;
+}
+
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: #228b22;
+  transform: translateY(-2px);
+}
+
+.nav-link.active {
+  background-color: #228b22;
+}
+
+/* Hero Section */
+.hero {
+  padding: 4rem 0;
+  position: relative;
+}
+
+.hero-content {
+  background: transparent;
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000000;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.25rem;
+  color: #666;
+  margin-bottom: 2rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+/* Botões */
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  min-width: 200px;
+
+  background: white;
+  color: #494949;
+  border: 2px solid #000000;
+}
+
+.btn:hover {
+  background: #494949;
+  color: white;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0);
+}
+
+/* Features Section */
+.features {
+  padding: 4rem 0;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.feature-card {
+  background: transparent;
+  border-radius: 12px;
+  padding: 3rem;      /* aumento do padding */
+  min-height: 300px;  /* altura mínima maior */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  width: 80px;        /* maior tamanho do ícone */
+  height: 80px;
+  background: linear-gradient(135deg, #494949, #000000);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 1rem;
+  font-size: 2.5rem;  /* maior tamanho do ícone */
+}
+
+.feature-card h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.feature-card p {
+  color: #666;
+}
+
+/* Products Section */
+.products {
+  padding: 2rem 0;
+  flex: 1;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.product-card {
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow:none;
+  transition: all 0.3s ease;
+  position: relative;
+  animation: fadeIn 0.6s ease-out;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 30px;  /* aumento do padding */
+  gap: 5px;      /* aumento do espaço interno */
+  max-width: 400px; /* aumento da largura máxima */
+  margin: 0 auto;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.product-card.premium {
+  border: 2px solid #ffd700;
+}
+
+.product-image {
+  width: 350px;  /* maior largura */
+  height: 400px; /* maior altura */
+  object-fit: cover;
+}
+
+.product-nota {
+  width: 300px;  /* maior largura */
+  height: 500px; /* maior altura */
+  object-fit: cover;
+}
+
+/* Notas das pastas específicas */
+.product-card img[src*="Notas-Arabes"],
+.product-card img[src*="notas"],
+.product-card img[src*="Nova-pasta"] 
+.product-card img[src*="Notas-Arabes-fem"] {
+  width: 350px;
+  height: auto;
+  max-height: 550px;
+  object-fit: contain;
+  margin: 10px auto 0;
+  display: block;
+}
+
+.product-info {
+  padding: 1.5rem;
+}
+
+.product-info h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.product-info p {
+  color: #666;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.product-price {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+}
+
+.premium-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: #ffd700;
+  color: #333;
+  padding: 0.25rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer p {
+  color: #ccc;
+}
+
+/* Responsive Design */
+@media (min-width: 768px) {
+  .header-content {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  .hero-content h2 {
+    font-size: 4rem;
+  }
+
+  .hero-buttons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .products-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Popup */
+.popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.popup.show {
+  display: flex;
+  opacity: 1;
+}
+
+.popup.hide {
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.popup-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  min-width: 300px;
+  max-width: 90%;
+  transform-origin: center;
+  animation: zoomIn 0.3s ease forwards;
+}
+
+.popup.hide .popup-content {
+  animation: zoomOut 0.2s ease forwards;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.85); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes zoomOut {
+  from { transform: scale(1); opacity: 1; }
+  to { transform: scale(0.85); opacity: 0; }
+}
+
+/* Botão de fechar popup */
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #333;
+  transition: transform 0.2s ease;
+}
+.close-btn:hover {
+  transform: scale(1.15);
+  color: #494949;
+}
+
+/* Botão voltar */
+#btn-voltar {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 9999;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 1rem 1.8rem;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #494949, #000000);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#btn-voltar:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 6px 20px rgb(0, 0, 0);
+}
+
+#btn-voltar:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 520px){
+  #btn-voltar{
+    padding: 0.75rem;
+    border-radius: 999px;
+    gap: 0;
+    width: 48px;
+    height: 48px;
+    justify-content:center;
+  }
+  #btn-voltar .label{ display: none; }
+  #btn-voltar{ font-size: 14px; bottom: 16px; left: 16px; }
+}
+
+@media (prefers-color-scheme: dark){
+  #btn-voltar{
+    background: linear-gradient(135deg, #494949, #000000);
+    color: #f5f5f5;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  }
+}
+
+/* Ajustes responsivos para cards e features */
+@media (max-width: 768px) {
+  .product-card {
+    padding: 55px;
+    max-width: 150%;
+  }
+
+  .product-card img,
+  .product-card img[src*="Notas-Arabes"],
+  .product-card img[src*="notas"],
+  .product-card img[src*="Nova-pasta"] {
+    width: 90%;
+    height: auto;
+    max-height: 450px;
+  }
+
+  .feature-card {
+    padding: 2rem;
+  }
+
+  .feature-icon {
+    width: 70px;
+    height: 70px;
+    font-size: 2rem;
+  }
+}
+
+/* ===========================
+   EFEITO "VENDIDO" NOS PERFUMES
+   =========================== */
+.product-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-card img {
+  transition: filter 0.4s ease;
+}
+
+/* Quando o produto estiver vendido */
+.product-card.sold img {
+  filter: blur(6px) brightness(0.7);
+}
+
+/* Texto “Sem Estoque” centralizado */
+.product-card.sold::after {
+  content: "Sem Estoque";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.8rem;
+  padding: 12px 28px;
+  border-radius: 10px;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+}
+
+/* =====================
+   CONTROLES DE ORDENAÇÃO
+===================== */
+
+.sort-controls {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sort-controls button {
+  padding: 10px 16px;
+  margin: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(135deg, #494949, #000000);
+  color: white;
+  transition: transform 0.2s ease;
+}
+
+.sort-controls button:hover {
+  transform: scale(1.05);
+}
+

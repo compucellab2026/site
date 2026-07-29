@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Preço do Produto</title>
+</head>
+<body>
+    <h1 id="produto">Produto: </h1>
+    <p id="preco">Preço: R$ </p>
+
+    <script>
+        async function atualizarProduto() {
+            const url = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vRK37Zi86Y3JCBE3e-e13W4Nxa7UV-xOc1t73-NpspnNepA9FfHQ0wIssB9AVbru2bA_9Q37GqEJsO3/pub?output=csv'; // substitua pelo seu link CSV
+            const resposta = await fetch(url);
+            const texto = await resposta.text();
+            const linhas = texto.trim().split('\n');
+            const colunas = linhas[1].split(',');
+
+            const nomeProduto = colunas[0];
+            const preco = colunas[1];
+
+            document.getElementById('produto').textContent = 'Produto: ' + nomeProduto;
+            document.getElementById('preco').textContent = 'Preço: R$ ' + preco;
+        }
+
+        // Atualiza ao carregar
+        atualizarProduto();
+
+        // Atualiza a cada 30 segundos
+        setInterval(atualizarProduto, 30000);
+    </script>
+</body>
+</html>

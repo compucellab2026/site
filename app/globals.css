@@ -1,0 +1,74 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+/* Variáveis de cor */
+:root {
+  --background: #fff;
+  --foreground: #252525;
+  --card: #fff;
+  --card-foreground: #252525;
+  --popover: #fff;
+  --popover-foreground: #252525;
+  --primary: #333;
+  --primary-foreground: #fff;
+  --secondary: #f5f5f5;
+  --secondary-foreground: #333;
+  --muted: #f5f5f5;
+  --muted-foreground: #888;
+  --accent: #f5f5f5;
+  --accent-foreground: #333;
+  --destructive: #d32f2f;
+  --destructive-foreground: #fff;
+  --border: #e5e7eb;
+  --input: #e5e7eb;
+  --ring: #a3a3a3;
+  --radius: 0.625rem;
+  --sidebar: #f9fafb;
+  --sidebar-foreground: #252525;
+  --sidebar-primary: #333;
+  --sidebar-primary-foreground: #fff;
+  --sidebar-accent: #f5f5f5;
+  --sidebar-accent-foreground: #333;
+  --sidebar-border: #e5e7eb;
+  --sidebar-ring: #a3a3a3;
+}
+
+.dark {
+  --background: #252525;
+  --foreground: #fff;
+  --card: #252525;
+  --card-foreground: #fff;
+  --popover: #252525;
+  --popover-foreground: #fff;
+  --primary: #fff;
+  --primary-foreground: #333;
+  --secondary: #333;
+  --secondary-foreground: #fff;
+  --muted: #333;
+  --muted-foreground: #a3a3a3;
+  --accent: #333;
+  --accent-foreground: #fff;
+  --destructive: #b71c1c;
+  --destructive-foreground: #fff;
+  --border: #333;
+  --input: #333;
+  --ring: #555;
+  --sidebar: #333;
+  --sidebar-foreground: #fff;
+  --sidebar-primary: #fff;
+  --sidebar-primary-foreground: #333;
+  --sidebar-accent: #333;
+  --sidebar-accent-foreground: #fff;
+  --sidebar-border: #333;
+  --sidebar-ring: #555;
+}
+
+/* Estilos base */
+@layer base {
+  html, body {
+    background-color: var(--background);
+    color: var(--foreground);
+  }
+}
