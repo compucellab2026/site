@@ -226,30 +226,19 @@ body {
   flex: 1;
 }
 
-.products-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
+.products-grid{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:45px;
+
 }
 
-.product-card {
-  background: transparent;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow:none;
-  transition: all 0.3s ease;
-  position: relative;
-  animation: fadeIn 0.6s ease-out;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  padding: 30px;  /* aumento do padding */
-  gap: 5px;      /* aumento do espaço interno */
-  max-width: 400px; /* aumento da largura máxima */
-  margin: 0 auto;
-}
+
 
 .product-card:hover {
   transform: translateY(-5px);
@@ -260,30 +249,11 @@ body {
   border: 2px solid #ffd700;
 }
 
-.product-image {
-  width: 350px;  /* maior largura */
-  height: 400px; /* maior altura */
-  object-fit: cover;
-}
 
-.product-nota {
-  width: 300px;  /* maior largura */
-  height: 500px; /* maior altura */
-  object-fit: cover;
-}
 
-/* Notas das pastas específicas */
-.product-card img[src*="Notas-Arabes"],
-.product-card img[src*="notas"],
-.product-card img[src*="Nova-pasta"] 
-.product-card img[src*="Notas-Arabes-fem"] {
-  width: 350px;
-  height: auto;
-  max-height: 550px;
-  object-fit: contain;
-  margin: 10px auto 0;
-  display: block;
-}
+
+
+
 
 .product-info {
   padding: 1.5rem;
@@ -583,3 +553,156 @@ body {
   transform: scale(1.05);
 }
 
+/* FOTO DOS PERFUMES */
+
+.product-photo,
+.product-card > img:first-child{
+    width: 350px;
+    height: 430px;
+
+    object-fit: contain;
+    object-position: center bottom;
+
+    display: block;
+
+    transform: scale(1.15);
+}
+/* ===========================================
+   CARD DOS PERFUMES
+=========================================== */
+/* =======================
+   CARD
+======================= */
+
+.product-card{
+    width:380px;
+    height:980px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:20px;
+
+    margin:auto;
+}
+
+/* FOTO */
+
+.product-card img:first-child{
+
+    width:340px;
+    height:360px;
+
+    object-fit:contain;
+    object-position:center bottom;
+
+    flex-shrink:0;
+}
+
+/* NOTAS */
+
+.product-card img:nth-child(2){
+
+    width:340px;
+    height:250px;
+
+    object-fit:contain;
+
+    flex-shrink:0;
+
+    margin-top:15px;
+}
+
+/* INFORMAÇÕES */
+
+.product-info{
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:space-between;
+
+    flex:1;
+}
+
+/* NOME */
+
+.product-info h2{
+
+    height:120px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    text-align:center;
+
+    line-height:1.35;
+
+    font-size:21px;
+
+    margin:0;
+}
+
+/* PARCELAMENTO */
+
+.product-info h4{
+
+    height:25px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin:0;
+}
+
+/* PREÇO */
+
+.product-price{
+
+    height:45px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    font-weight:bold;
+}
+
+.product-card{
+
+width:330px;
+
+}
+
+
+
+@media(max-width:768px){
+
+.products-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.product-card{
+
+width:100%;
+max-width:400px;
+
+}
+
+}
